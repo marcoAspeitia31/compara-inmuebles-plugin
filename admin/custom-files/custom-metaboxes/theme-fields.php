@@ -12,7 +12,7 @@ function compara_inmuebles_theme_options_metabox() {
 		'id'           => 'compara_inmuebles_options_page',
 		'title'        => esc_html__( 'Compara inmuebles', 'cmb2' ),
 		'object_types' => array( 'options-page' ),
-    'show_in_rest' => WP_REST_Server::READABLE,
+    	'show_in_rest' => WP_REST_Server::READABLE,
 
 		/*
 		 * The following parameters are specific to the options-page box
@@ -20,11 +20,11 @@ function compara_inmuebles_theme_options_metabox() {
 		 */
 
 		'option_key'      => 'compara_inmuebles_theme_options', // The option key and admin menu page slug.
-		'icon_url'        => 'dashicons-palmtree', // Menu icon. Only applicable if 'parent_slug' is left empty.
+		'icon_url'        => plugin_dir_url( __DIR__ ) . 'img/logo.png', // Menu icon. Only applicable if 'parent_slug' is left empty.
 		// 'menu_title'              => esc_html__( 'Options', 'cmb2' ), // Falls back to 'title' (above).
 		// 'parent_slug'             => 'themes.php', // Make options page a submenu item of the themes menu.
 		// 'capability'              => 'manage_options', // Cap required to view options-page.
-		// 'position'                => 1, // Menu position. Only applicable if 'parent_slug' is left empty.
+		'position'                	 => 2, // Menu position. Only applicable if 'parent_slug' is left empty.
 		// 'admin_menu_hook'         => 'network_admin_menu', // 'network_admin_menu' to add network-level options page.
 		// 'priority'                => 10, // Define the page-registration admin menu hook priority.
 		// 'display_cb'              => false, // Override the options-page form output (CMB2_Hookup::options_page_output()).
