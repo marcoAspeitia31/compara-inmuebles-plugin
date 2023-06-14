@@ -31,6 +31,21 @@ class Compara_inmuebles_plugin_Activator {
 	 */
 	public static function activate() {
 
+		$user_id = get_current_user_id();
+		$page = get_page_by_path( 'inmuebles', OBJECT );
+
+		if( !isset( $page ) ) {
+
+			wp_insert_post( array (
+				'post_author'   => $user_id,
+				'post_type' 	=> 'page',
+				'post_title' 	=> 'Inmuebles',
+				'post_name' 	=> 'inmuebles',
+				'post_status' 	=> 'publish'
+			) );
+			
+		}
+		
 	}
 
 }
